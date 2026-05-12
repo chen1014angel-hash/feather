@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aikatsu! 偶像學園：最耀眼的舞台</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #ff69b4;
+            --starlight-gold: #ffd700;
+            --dream-purple: #9b59b6;
+            --soft-white: #fffafa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background: linear-gradient(135deg, #fff5f8 0%, #ffe4f0 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+ 
+        /* --- 導覽列 --- */
+        nav {
+            background-color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-pink);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-pink);
+        }
+
+        /* --- 主視覺 Banner --- */
+        header {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1514525253361-bee8718a300a?auto=format&fit=crop&q=80&w=1600') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            background: var(--primary-pink);
+            padding: 5px 20px;
+            border-radius: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* --- 偶像學院特色 --- */
+        .features {
+            padding: 5rem 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-pink);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* --- 動畫 --- */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- 頁尾 --- */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .cta-button {
+            margin-top: 2rem;
+            padding: 12px 30px;
+            background-color: var(--starlight-gold);
+            color: #333;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">AIKATSU! STARS</div>
+        <ul class="nav-links">
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">偶像列表</a></li>
+            <li><a href="#">卡片圖鑑</a></li>
+            <li><a href="#">舞台曲目</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 class="hero-title">閃耀吧！我的偶像活動！</h1>
+        <p class="hero-subtitle">星光學園 (Starlight Academy) 招生中</p>
+        <button class="cta-button">開始你的偶像之路</button>
+    </header>
+
+    <section class="features">
+        <div class="feature-card">
+            <div class="icon">✨</div>
+            <h3>Selfless Effort</h3>
+            <p>透過每日不懈的練習，磨練歌聲與舞步，邁向頂級偶像之路。</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">👗</div>
+            <h3>Dress Cards</h3>
+            <p>使用 Aikatsu 卡片進行換裝，釋放屬於你的星光能量。</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🌟</div>
+            <h3>Special Appeal</h3>
+            <p>在舞台的最高潮，展現最華麗的原創演繹！</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Aikatsu Fan Project. 所有的夢想都能在這裡實現。</p>
+    </footer>
+
+</body>
+</html>
